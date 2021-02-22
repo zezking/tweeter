@@ -25,6 +25,7 @@ span {
   transition: background-color 300ms;
 
   padding: 0.5em;
+  /* fix animation */
   border-radius: 15px;
 }
 
