@@ -1,6 +1,8 @@
 img {
   margin-top: 3rem;
   width: 200px;
+  -webkit-box-shadow: 5px 5px 16px -5px #000000;
+  box-shadow: 5px 5px 16px -5px #000000;
 }
 
 header {
