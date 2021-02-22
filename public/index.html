@@ -13,7 +13,7 @@
     <!-- External Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -25,6 +25,7 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -35,10 +36,20 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
+    <div class="title"></div>
     <nav>
-      <span>SHWO</span>
+      <a class="logo" href="#">Twitter</a>
+      <a class="new-tweet" href="#"><span>Write</span> a new tweet</a>
     </nav>
-
+    <header>
+      <div class="img-cropper">
+        <img src="/images/profile.png" />
+      </div>
+      <br />
+      <div>
+        <h2>Ada</h2>
+      </div>
+    </header>
     <!-- Page-specific (main) content here -->
     <main class="container"></main>
   </body>
