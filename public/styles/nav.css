@@ -1,7 +1,7 @@
 a {
   color: inherit;
   text-decoration: none;
-  margin: 1.7rem;
+  margin: 1.7em;
 }
 
 a :hover {
@@ -24,7 +24,7 @@ span {
   font-weight: 600;
   transition: background-color 300ms;
 
-  padding: 0.5rem;
+  padding: 0.5em;
   border-radius: 15px;
 }
 
