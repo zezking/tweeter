@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -39,7 +40,7 @@
     <div class="title"></div>
     <nav>
       <a class="logo" href="#">Twitter</a>
-      <a class="new-tweet" href="#"><span>Write</span> a new tweet</a>
+      <a class="new-tweet-button" href="#"><span>Write</span> a new tweet</a>
     </nav>
     <header>
       <div class="img-cropper">
@@ -56,12 +57,24 @@
         <div class="tweet-subtitle">
           <h2>Compose Tweet</h2>
         </div>
-        <form method="POST" action="/tweets/">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+        <form method="POST" action="/tweets">
+          <div class="input">
+            <div class="label">
+              <label for="tweet-text">What are you humming about?</label>
+            </div>
+
+            <textarea
+              placeholder="say something nice!"
+              name="text"
+              id="tweet-text"
+            ></textarea>
+
+            <div class="button-counter">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
           </div>
         </form>
       </section>
