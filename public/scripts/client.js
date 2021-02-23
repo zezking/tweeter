@@ -6,7 +6,6 @@
 $(document).ready(function () {
   $("textarea")
     .each(function () {
-      console.log("something");
       this.setAttribute(
         "style",
         "height:" + this.scrollHeight + "px;overflow-y:hidden;"
