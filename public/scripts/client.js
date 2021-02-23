@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const { autoTextHeight } = require("./helper");
+
 const tweetData = [
   {
     user: {
@@ -54,33 +54,33 @@ const $tweet = $(document).ready(function () {
     }
     $("#counter").text(remainingLength);
   });
-
-  const renderTweets = (tweets) => {
-    for (i in tweets) {
-      $(".new-tweet-feed").append(createTweetElement(tweets[i]));
-    }
-  };
-  const createTweetElement = (tweet) => {
-    let $tweet = $(`<article class="tweet-feed">
-    <header>
-      <div class="user-profile-name">
-        <img src=${tweet.user.avatars} alt="" />
-        <span class="username">${tweet.user.name}</span>
-      </div>
-      <a class="user-ID">${tweet.user.handle}</a>
-    </header>
-    <p>${tweet.content.text}</p>
-    <footer>
-      <time>4 days ago</time>
-      <div class="save-retweet-like">
-        <i class="fas fa-bookmark"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
-      </div>
-    </footer>
-    </article>"`);
-    return $tweet;
-  };
-
+  //render new tweet feet
   renderTweets(tweetData);
 });
+
+const renderTweets = (tweets) => {
+  for (i in tweets) {
+    $(".new-tweet-feed").append(createTweetElement(tweets[i]));
+  }
+};
+const createTweetElement = (tweet) => {
+  let $tweet = $(`<article class="tweet-feed">
+  <header>
+    <div class="user-profile-name">
+      <img src=${tweet.user.avatars} alt="" />
+      <span class="username">${tweet.user.name}</span>
+    </div>
+    <a class="user-ID">${tweet.user.handle}</a>
+  </header>
+  <p>${tweet.content.text}</p>
+  <footer>
+    <time>4 days ago</time>
+    <div class="save-retweet-like">
+      <i class="fas fa-bookmark"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="fas fa-heart"></i>
+    </div>
+  </footer>
+  </article>"`);
+  return $tweet;
+};
