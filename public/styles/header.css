@@ -24,6 +24,7 @@ h2 {
 .username span {
   font-size: 1em;
   padding: 0.1em 0.1em;
+  font-weight: 600;
 }
 .username h2 {
   margin-top: -0.5em;

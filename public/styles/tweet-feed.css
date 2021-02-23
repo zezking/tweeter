@@ -29,9 +29,9 @@
   display: flex;
   justify-content: space-between;
 }
-.tweet-feed > header,
-.tweet-feed > p {
-  margin-bottom: 0.8em;
+
+.tweet-feed p {
+  margin: 0.8em;
 }
 .tweet-feed footer {
   font-size: 0.8em;
