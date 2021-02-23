@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
+const { autoTextHeight } = require("./helper");
 const tweetData = [
   {
     user: {
@@ -48,27 +48,28 @@ const $tweet = $(document).ready(function () {
     let remainingLength = 140 - textLength;
 
     if (remainingLength < 0) {
-      $("#counter").css("color", "red");
+      $("#counter").css("color", "red"); //factor to create a overCounter Class
     } else {
       $("#counter").css("color", "black");
     }
     $("#counter").text(remainingLength);
   });
 
-  console.log($tweet); // to see what it looks like
-  $(".new-tweet-feed").append($tweet);
-
-  const renderTweets = (tweets) => {};
+  const renderTweets = (tweets) => {
+    for (i in tweets) {
+      $(".new-tweet-feed").append(createTweetElement(tweets[i]));
+    }
+  };
   const createTweetElement = (tweet) => {
     let $tweet = $(`<article class="tweet-feed">
     <header>
       <div class="user-profile-name">
-        <img src="./images/tweeter-profile3.png" alt="" />
-        <span class="username">Yolo</span>
+        <img src=${tweet.user.avatars} alt="" />
+        <span class="username">${tweet.user.name}</span>
       </div>
-      <a class="user-ID">${tweetData[0].user.name}</a>
+      <a class="user-ID">${tweet.user.handle}</a>
     </header>
-    <p>${tweetData[0].content.text}</p>
+    <p>${tweet.content.text}</p>
     <footer>
       <time>4 days ago</time>
       <div class="save-retweet-like">
@@ -80,4 +81,6 @@ const $tweet = $(document).ready(function () {
     </article>"`);
     return $tweet;
   };
+
+  renderTweets(tweetData);
 });
