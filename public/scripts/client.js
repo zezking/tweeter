@@ -8,17 +8,14 @@ $(document).ready(function () {
 
   $("textarea")
     .each(function () {
-      this.setAttribute(
-        "style",
-        "height:" + this.scrollHeight + "px;overflow-y:hidden;"
-      );
+      this.setAttribute("style", "height:30px;overflow-y:hidden;");
     })
     .on("input", function () {
-      this.style.height = "auto";
-      this.style.height = this.scrollHeight + "px";
+      this.style.height = "30px";
+      this.style.height = this.scrollHeight + 2 + "px";
     });
 
-  $("textarea").keyup(function () {
+  $("textarea").on("input", function () {
     let textLength = $(this).val().length;
     let remainingLength = 140 - textLength;
     $(".counter").text(remainingLength);
