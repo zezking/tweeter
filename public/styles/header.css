@@ -1,4 +1,4 @@
-img {
+.user-header img {
   margin-top: 4em;
   width: 200px;
   border-radius: 50%;
@@ -10,7 +10,7 @@ h2 {
   margin: 0;
   font-size: 1em;
 }
-header {
+.user-header {
   height: 400px;
   width: 100%;
   display: flex;
