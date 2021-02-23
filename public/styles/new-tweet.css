@@ -15,10 +15,6 @@
   font-size: 0.8em;
 }
 
-h2 {
-  font-size: 0.8em;
-}
-
 output {
   font-family: "Bungee", cursive;
 }
@@ -53,10 +49,6 @@ button {
 
 button :focus {
   outline: none;
-}
-
-label {
-  font-size: 1em;
 }
 
 .tweet-subtitle {

@@ -5,6 +5,8 @@
  */
 html {
   box-sizing: border-box;
+  font-weight: 300;
+  margin: 0;
 }
 *,
 *:before,
@@ -15,6 +17,10 @@ html {
 /*
  * Global layout stuff
  */
+
+h2 {
+  font-size: 0.8em;
+}
 
 body {
   color: #f4f1ec;
