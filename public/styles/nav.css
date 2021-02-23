@@ -34,6 +34,7 @@ span {
   font-size: 30px;
 }
 .new-tweet-button {
+  font-size: 0.8em;
   font-family: "Source Sans Pro", sans-serif;
 }
 .new-tweet-button span {

@@ -1,8 +1,6 @@
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-size: 0.8em;
-  flex-direction: column;
-  justify-items: flex-end;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
@@ -26,6 +24,7 @@ output {
 }
 
 textarea {
+  height: 3em;
   font-size: 1em;
   height: 2em;
   display: flex;
