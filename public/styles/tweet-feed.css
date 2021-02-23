@@ -20,6 +20,7 @@
 }
 .tweet-feed img {
   width: 2.875em;
+  margin-right: 0.8em;
 }
 .tweet-feed p {
   margin: 0;
@@ -30,9 +31,10 @@
 }
 .tweet-feed > header,
 .tweet-feed > p {
-  margin-bottom: 10px;
+  margin-bottom: 0.8em;
 }
 .tweet-feed footer {
+  font-size: 0.8em;
   display: flex;
   justify-content: space-between;
 }

@@ -18,6 +18,12 @@ $(document).ready(function () {
   $("textarea").on("input", function () {
     let textLength = $(this).val().length;
     let remainingLength = 140 - textLength;
-    $(".counter").text(remainingLength);
+
+    if (remainingLength < 0) {
+      $("#counter").css("color", "red");
+    } else {
+      $("#counter").css("color", "black");
+    }
+    $("#counter").text(remainingLength);
   });
 });
