@@ -18,6 +18,9 @@ nav {
   color: #f5f5f5;
   justify-content: space-between;
   align-items: center;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
 }
 
 .top-nav span {
