@@ -26,12 +26,15 @@
   align-items: center;
 }
 .tweet-feed img {
-  width: 2.875em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
   margin-right: 0.8em;
-  transition: width 300ms;
+  transition: all 300ms;
 }
 .tweet-feed img:hover {
   width: 5em;
+  height: 5em;
 }
 
 .tweet-feed footer {
