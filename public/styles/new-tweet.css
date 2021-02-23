@@ -1,6 +1,8 @@
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-size: 0.8em;
+  flex-direction: column;
+  justify-items: flex-end;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
@@ -14,10 +16,19 @@
   /* Firefox 18- */
   font-size: 0.8em;
 }
+
 h2 {
   font-size: 0.8em;
 }
+
+output {
+  font-family: "Bungee", cursive;
+}
+
 textarea {
+  font-size: 1em;
+  height: 2em;
+  display: flex;
   border: none;
   resize: none;
   outline: none;
@@ -45,6 +56,14 @@ button {
 button :focus {
   outline: none;
 }
+
+label {
+  font-size: 1em;
+}
+
+.tweet-subtitle {
+  margin-left: 1em;
+}
 .label,
 textarea {
   margin-bottom: 0.8em;
@@ -60,6 +79,8 @@ textarea {
   margin: 1em;
   padding: 1em;
   border-radius: 1em;
+  -webkit-box-shadow: 7px 8px 16px -5px #000000;
+  box-shadow: 7px 8px 16px -5px #000000;
 }
 
 .button-counter {
