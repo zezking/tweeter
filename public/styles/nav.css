@@ -36,3 +36,7 @@ span {
 .new-tweet-button {
   font-family: "Source Sans Pro", sans-serif;
 }
+.new-tweet-button span {
+  border: 2px solid #ffc068;
+  padding: 6px;
+}
