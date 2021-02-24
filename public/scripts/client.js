@@ -23,9 +23,11 @@ $(document).ready(function () {
   $("form").on("submit", function (event) {
     event.preventDefault();
     $tweetContent = $(this).serialize();
+    console.log($tweetContent);
     $.ajax({
       url,
       method: "POST",
+      Data: $tweetContent,
     }).then((result) => console.log(result));
   });
 });
@@ -33,8 +35,7 @@ $(document).ready(function () {
 const loadTweets = () => {
   $.ajax({
     url,
-    method: "GET",
-  }).done((result) => {
+  }).then((result) => {
     renderTweets(result);
   });
 };
