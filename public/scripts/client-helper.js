@@ -6,6 +6,14 @@ const loadTweets = () => {
   });
 };
 
+const submitTweet = (event, action) => {
+  event.preventDefault();
+  $.ajax({
+    url,
+    method: "POST",
+    data: $("form").serialize(),
+  }).then(loadTweets);
+};
 //count the character
 const charCounter = function () {
   let textLength = $(this).val().length;
@@ -27,9 +35,15 @@ const convertTime = (pastTime) => {
 };
 
 const renderTweets = (tweets) => {
+  $(".new-tweet-post").empty();
   for (const tweet of Object.values(tweets)) {
     $(".new-tweet-post").append(createTweetElement(tweet)).hide().fadeIn(400);
   }
+};
+const renderTweetsSubmission = (tweets) => {
+  console.log(tweets);
+  const tweet = Object.values(tweets).pop();
+  $(".new-tweet-post").append(createTweetElement(tweet)).hide().fadeIn(400);
 };
 const createTweetElement = (tweet) => {
   let $tweet = $(`<article class="tweet-feed">
