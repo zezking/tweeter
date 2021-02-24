@@ -37,21 +37,6 @@ const loadTweets = () => {
   }).then((result) => {
     renderTweets(result);
   });
-};
-
-// const loadTweetSubmission = () => {
-//   $.ajax({
-//     url,
-//   }).then((result) => {
-//     console.log(`new tweet submission object ${result[result.length - 1]}`);
-//     renderTweetsSubmission(result[result.length - 1]);
-//   });
-// };
-
-// const renderTweetsSubmission = (tweet) => {
-//   console.log(tweet);
-//   $(".new-tweet-post").append(createTweetElement(tweet)).hide().fadeIn(400);
-// };
 
 const renderTweets = (tweets) => {
   console.log(typeof tweets);
