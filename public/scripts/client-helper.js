@@ -9,9 +9,13 @@ const loadTweets = (action) => {
 //POST the tweet with post method and text content in the form
 const submitTweet = (event, action) => {
   event.preventDefault();
-  console.log($("textarea").val().length);
-  if (textLength === 0) {
-    alert("sfsdfdf");
+  const textLength = $("textarea").val();
+  if (textValidation(textLength) === "toolong") {
+    alert("Your tweet is too long");
+    return;
+  }
+  if (textValidation(textLength) === "notPresent") {
+    alert("You need to at least put something");
     return;
   }
   $.ajax({
@@ -76,8 +80,8 @@ const convertTime = (pastTime) => {
 
 const textValidation = (str) => {
   if (str.length > 140) {
-    alert("Your tweet is too long!!");
+    return "toolong";
   } else if (str.length === 0) {
-    alert("Your need to at least write something!");
+    return "notPresent";
   }
 };
