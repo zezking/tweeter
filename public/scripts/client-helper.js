@@ -77,7 +77,7 @@ const convertTime = (pastTime) => {
   datetime.setUTCSeconds(pastTime);
   return datetime;
 };
-
+//validate text length if it's too long or too short
 const textValidation = (str) => {
   if (str.length > 140) {
     return "toolong";

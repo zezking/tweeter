@@ -15,6 +15,7 @@ $(document).ready(function () {
       this.style.height = "30px";
       this.style.height = this.scrollHeight + 2 + "px";
     });
+
   //character counter
   $("textarea").on("input", charCounter);
 
