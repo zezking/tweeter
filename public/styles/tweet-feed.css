@@ -44,9 +44,9 @@
 }
 
 .tweet-feed p {
-  margin-top: 0;
-  margin-bottom: 0.7em;
-  padding-left: 5em;
+  margin: 0 0 0.7em 2em;
+
+  padding: 1em;
 }
 
 .tweet-feed time {
