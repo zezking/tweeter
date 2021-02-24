@@ -57,7 +57,7 @@ $.ajax({
 
     const renderTweets = (tweets) => {
       for (i in tweets) {
-        $(".new-tweet-feed").append(createTweetElement(tweets[i]));
+        $(".new-tweet-post").append(createTweetElement(tweets[i]));
       }
     };
 
