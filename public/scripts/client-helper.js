@@ -1,50 +1,38 @@
-const loadTweets = () => {
+//GET the current tweets
+const loadTweets = (action) => {
   $.ajax({
     url,
-  }).then((result) => {
-    renderTweets(result);
+  }).then((res) => {
+    action(res);
   });
 };
-
+//POST the tweet with post method and text content in the form
 const submitTweet = (event, action) => {
   event.preventDefault();
+  console.log($("textarea").val().length);
+  if (textLength === 0) {
+    alert("sfsdfdf");
+    return;
+  }
   $.ajax({
     url,
     method: "POST",
     data: $("form").serialize(),
-  }).then(loadTweets);
+  }).then((res) => action(res));
 };
-//count the character
-const charCounter = function () {
-  let textLength = $(this).val().length;
-  let remainingLength = 140 - textLength;
-
-  if (remainingLength < 0) {
-    $("#counter").css("color", "red"); //factor to create a overCounter Class
-  } else {
-    $("#counter").css("color", "black");
-  }
-  $("#counter").text(remainingLength);
-};
-//convert the unix seconds to normal time
-const convertTime = (pastTime) => {
-  const datetime = new Date(0);
-
-  datetime.setUTCSeconds(pastTime);
-  return datetime;
-};
-
+//render all the tweets from the tweeter objects
 const renderTweets = (tweets) => {
   $(".new-tweet-post").empty();
-  for (const tweet of Object.values(tweets)) {
-    $(".new-tweet-post").append(createTweetElement(tweet)).hide().fadeIn(400);
+  for (const tweet of Object.values(tweets).reverse()) {
+    $(".new-tweet-post").append(createTweetElement(tweet));
   }
 };
-const renderTweetsSubmission = (tweets) => {
-  console.log(tweets);
+// render and add the lastest tweets
+const addTweetsSubmission = (tweets) => {
   const tweet = Object.values(tweets).pop();
-  $(".new-tweet-post").append(createTweetElement(tweet)).hide().fadeIn(400);
+  $(".new-tweet-post").prepend(createTweetElement(tweet).hide().fadeIn(400));
 };
+//create a new tweet element
 const createTweetElement = (tweet) => {
   let $tweet = $(`<article class="tweet-feed">
   <header>
@@ -65,4 +53,31 @@ const createTweetElement = (tweet) => {
   </footer>
   </article>"`);
   return $tweet;
+};
+//count the character
+const charCounter = function () {
+  const textLength = $(this).val().length;
+  let remainingLength = 140 - textLength;
+
+  if (remainingLength < 0) {
+    $("#counter").css("color", "red"); //factor to create a overCounter Class
+  } else {
+    $("#counter").css("color", "black");
+  }
+  $("#counter").text(remainingLength);
+};
+//convert the unix seconds to normal time // This needs to refactor
+const convertTime = (pastTime) => {
+  const datetime = new Date(0);
+
+  datetime.setUTCSeconds(pastTime);
+  return datetime;
+};
+
+const textValidation = (str) => {
+  if (str.length > 140) {
+    alert("Your tweet is too long!!");
+  } else if (str.length === 0) {
+    alert("Your need to at least write something!");
+  }
 };

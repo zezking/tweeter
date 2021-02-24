@@ -17,10 +17,11 @@ $(document).ready(function () {
     });
   //character counter
   $("textarea").on("input", charCounter);
-  //load dummy tweets
-  loadTweets();
 
-  $("form").on("submit", function (event) {
-    submitTweet(event);
+  //load dummy tweets
+  loadTweets(renderTweets);
+  //click submit to render and load the lastest tweets with random user generated
+  $("form").on("submit", (event) => {
+    submitTweet(event, () => loadTweets(addTweetsSubmission));
   });
 });
