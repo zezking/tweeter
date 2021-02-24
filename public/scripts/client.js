@@ -37,6 +37,7 @@ const loadTweets = () => {
   }).then((result) => {
     renderTweets(result);
   });
+};
 
 const renderTweets = (tweets) => {
   console.log(typeof tweets);
