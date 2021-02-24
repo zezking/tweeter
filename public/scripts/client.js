@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const url = "http://localhost:8080/tweets/";
+const url = "/tweets";
 
 $(document).ready(function () {
   //autoheight for text area
@@ -17,19 +17,27 @@ $(document).ready(function () {
     });
   //character counter
   $("textarea").on("input", charCounter);
-  const loadTweets = () => {
-    $.ajax({
-      url,
-      method: "GET",
-    }).done((result) => {
-      renderTweets(result);
-    });
-  };
+  //load dummy tweets
+  loadTweets();
+
   $("form").on("submit", function (event) {
     event.preventDefault();
-    loadTweets();
+    $tweetContent = $(this).serialize();
+    $.ajax({
+      url,
+      method: "POST",
+    }).then((result) => console.log(result));
   });
 });
+
+const loadTweets = () => {
+  $.ajax({
+    url,
+    method: "GET",
+  }).done((result) => {
+    renderTweets(result);
+  });
+};
 
 //count the character
 const charCounter = function () {
@@ -51,11 +59,11 @@ const convertTime = (pastTime) => {
   return datetime;
 };
 const renderTweets = (tweets) => {
-  for (i in tweets) {
+  for (let i = tweets.length - 1; i > -1; i--) {
     $(".new-tweet-post")
       .append(createTweetElement(tweets[i]))
       .hide()
-      .fadeIn(800);
+      .fadeIn(400);
   }
 };
 const createTweetElement = (tweet) => {
