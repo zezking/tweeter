@@ -23,12 +23,11 @@ $(document).ready(function () {
   $("form").on("submit", function (event) {
     event.preventDefault();
     $tweetContent = $(this).serialize();
-    console.log($tweetContent);
     $.ajax({
       url,
       method: "POST",
-      Data: $tweetContent,
-    }).then((result) => console.log(result));
+      data: $tweetContent,
+    }).then(loadTweets());
   });
 });
 
@@ -40,31 +39,24 @@ const loadTweets = () => {
   });
 };
 
-//count the character
-const charCounter = function () {
-  let textLength = $(this).val().length;
-  let remainingLength = 140 - textLength;
+// const loadTweetSubmission = () => {
+//   $.ajax({
+//     url,
+//   }).then((result) => {
+//     console.log(`new tweet submission object ${result[result.length - 1]}`);
+//     renderTweetsSubmission(result[result.length - 1]);
+//   });
+// };
 
-  if (remainingLength < 0) {
-    $("#counter").css("color", "red"); //factor to create a overCounter Class
-  } else {
-    $("#counter").css("color", "black");
-  }
-  $("#counter").text(remainingLength);
-};
-//convert the unix seconds to normal time
-const convertTime = (pastTime) => {
-  const datetime = new Date(0);
+// const renderTweetsSubmission = (tweet) => {
+//   console.log(tweet);
+//   $(".new-tweet-post").append(createTweetElement(tweet)).hide().fadeIn(400);
+// };
 
-  datetime.setUTCSeconds(pastTime);
-  return datetime;
-};
 const renderTweets = (tweets) => {
-  for (let i = tweets.length - 1; i > -1; i--) {
-    $(".new-tweet-post")
-      .append(createTweetElement(tweets[i]))
-      .hide()
-      .fadeIn(400);
+  console.log(typeof tweets);
+  for (const tweet of Object.values(tweets)) {
+    $(".new-tweet-post").append(createTweetElement(tweet)).hide().fadeIn(400);
   }
 };
 const createTweetElement = (tweet) => {
@@ -88,4 +80,24 @@ const createTweetElement = (tweet) => {
   </footer>
   </article>"`);
   return $tweet;
+};
+
+//count the character
+const charCounter = function () {
+  let textLength = $(this).val().length;
+  let remainingLength = 140 - textLength;
+
+  if (remainingLength < 0) {
+    $("#counter").css("color", "red"); //factor to create a overCounter Class
+  } else {
+    $("#counter").css("color", "black");
+  }
+  $("#counter").text(remainingLength);
+};
+//convert the unix seconds to normal time
+const convertTime = (pastTime) => {
+  const datetime = new Date(0);
+
+  datetime.setUTCSeconds(pastTime);
+  return datetime;
 };
