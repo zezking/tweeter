@@ -25,3 +25,30 @@ const convertTime = (pastTime) => {
   datetime.setUTCSeconds(pastTime);
   return datetime;
 };
+
+const renderTweets = (tweets) => {
+  for (const tweet of Object.values(tweets)) {
+    $(".new-tweet-post").append(createTweetElement(tweet)).hide().fadeIn(400);
+  }
+};
+const createTweetElement = (tweet) => {
+  let $tweet = $(`<article class="tweet-feed">
+  <header>
+    <div class="user-profile-name">
+      <img src=${tweet.user.avatars} alt="" />
+      <span class="username">${tweet.user.name}</span>
+    </div>
+    <a class="user-ID">${tweet.user.handle}</a>
+  </header>
+  <p>${tweet.content.text}</p>
+  <footer>
+    <time>${convertTime(tweet["created_at"])}</time>
+    <div class="save-retweet-like">
+      <i class="fas fa-bookmark"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="fas fa-heart"></i>
+    </div>
+  </footer>
+  </article>"`);
+  return $tweet;
+};
