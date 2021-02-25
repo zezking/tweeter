@@ -1,4 +1,14 @@
 //GET the current tweets
+
+const $errorMsgTooLong = $(`<h2 id="warning-too-short">
+<i class="fas fa-exclamation-triangle"></i>
+Will you shut up man<i class="fas fa-exclamation-triangle"></i>
+</h2>`);
+const $errorNoContent = $(`<h2 id="warning-too-long">
+<i class="fas fa-exclamation-triangle"></i>
+Got nothing to say?<i class="fas fa-exclamation-triangle"></i>
+</h2>`);
+
 const loadTweets = (action) => {
   $.ajax({
     url,
@@ -11,9 +21,31 @@ const submitTweet = (event, action) => {
   event.preventDefault();
   const textLength = $("textarea").val();
   if (textValidation(textLength) === "toolong") {
+    $(".warning-box").empty();
+    $(".warning-box")
+      .append($errorMsgTooLong)
+      .hide()
+      .fadeIn(400)
+      .fadeOut(400)
+      .fadeIn(400)
+      .fadeOut(400)
+      .fadeIn(400)
+      .fadeOut(400);
+
     return;
   }
   if (textValidation(textLength) === "notPresent") {
+    $(".warning-box").empty();
+    $(".warning-box")
+      .append($errorNoContent)
+      .hide()
+      .fadeIn(400)
+      .fadeOut(400)
+      .fadeIn(400)
+      .fadeOut(400)
+      .fadeIn(400)
+      .fadeOut(400);
+
     return;
   }
 
@@ -45,7 +77,6 @@ const escape = function (str) {
 };
 //create a new tweet element
 const createTweetElement = (tweet) => {
-  const harmfulmsg = "<script>$('body').empty()</script>";
   let $tweet = $(`<article class="tweet-feed">
   <header>
     <div class="user-profile-name">
@@ -66,6 +97,7 @@ const createTweetElement = (tweet) => {
   </article>"`);
   return $tweet;
 };
+
 //count the character
 const charCounter = function () {
   const textLength = $(this).val().length;
@@ -93,8 +125,4 @@ const textValidation = (str) => {
   } else if (str.length === 0) {
     return "notPresent";
   }
-};
-
-const buttonAnimation = () => {
-  $("#send-Tweet").css("background-color:black");
 };

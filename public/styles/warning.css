@@ -4,19 +4,18 @@
   border: #ff3333 1px;
 }
 
-.warning-box {
-  background-color: black;
-  padding: 0.5em;
-  border-radius: 1.5em;
-}
-
 .warning-box h2 {
   margin: 0;
 }
 
 #warning-too-short {
-  display: none;
+  background-color: hsl(0, 0%, 10%);
+  padding: 0.5em;
+  border-radius: 1.5em;
 }
 
 #warning-too-long {
+  background-color: hsl(0, 0%, 10%);
+  padding: 0.5em;
+  border-radius: 1.5em;
 }
