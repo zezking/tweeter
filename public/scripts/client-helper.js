@@ -2,7 +2,7 @@
 
 const $errorMsgTooLong = $(`<h2 id="warning-too-short">
 <i class="fas fa-exclamation-triangle fa-xs"></i>
-Will you shut up man<i class="fas fa-exclamation-triangle fa-xs"></i>
+Content too long!<i class="fas fa-exclamation-triangle fa-xs"></i>
 </h2>`);
 const $errorNoContent = $(`<h2 id="warning-too-long">
 <i class="fas fa-exclamation-triangle fa-xs"></i>
