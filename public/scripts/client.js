@@ -18,6 +18,8 @@ $(document).ready(function () {
 
   //character counter
   $("textarea").on("input", charCounter);
+  $("#new-tweet-button").on("click", toggleTweet);
+  $("#compose-tweet-button").on("click", toggleTweet);
 
   //load dummy tweets
   loadTweets(renderTweets);

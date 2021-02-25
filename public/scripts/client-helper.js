@@ -67,7 +67,7 @@ const renderTweets = (tweets) => {
 };
 
 const toggleTweet = () => {
-  $("#new-tweet").toggle().hide().h;
+  $(".input").slideToggle();
 };
 // render and add the lastest tweets
 const addTweetsSubmission = (tweets) => {
