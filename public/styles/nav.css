@@ -48,3 +48,31 @@ nav {
 .new-tweet-button span {
   border: 2px solid #ffc068;
 }
+
+@media only screen and (max-width: 700px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: 5em;
+    background-color: hsl(223, 17%, 16%);
+    background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+  }
+  .new-tweet-button {
+    display: none;
+  }
+  .top-nav a {
+    font-size: 1.5em;
+    margin: 2em 0 -1em 0;
+  }
+
+  .top-nav span {
+    padding: 0;
+    width: 4em;
+  }
+  .top-nav .logo {
+    margin-top: 1em;
+    font-size: 1.5em;
+  }
+  .fa-angle-double-down {
+  }
+}
