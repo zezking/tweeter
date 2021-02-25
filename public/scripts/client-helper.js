@@ -1,12 +1,12 @@
 //GET the current tweets
 
 const $errorMsgTooLong = $(`<h2 id="warning-too-short">
-<i class="fas fa-exclamation-triangle"></i>
-Will you shut up man<i class="fas fa-exclamation-triangle"></i>
+<i class="fas fa-exclamation-triangle fa-xs"></i>
+Will you shut up man<i class="fas fa-exclamation-triangle fa-xs"></i>
 </h2>`);
 const $errorNoContent = $(`<h2 id="warning-too-long">
-<i class="fas fa-exclamation-triangle"></i>
-Got nothing to say?<i class="fas fa-exclamation-triangle"></i>
+<i class="fas fa-exclamation-triangle fa-xs"></i>
+Got nothing to say?<i class="fas fa-exclamation-triangle fa-xs"></i>
 </h2>`);
 
 const loadTweets = (action) => {
@@ -57,6 +57,7 @@ const submitTweet = (event, action) => {
 
   $("#tweet-text").val("");
 };
+
 //render all the tweets from the tweeter objects
 const renderTweets = (tweets) => {
   $(".new-tweet-post").empty();
@@ -64,17 +65,23 @@ const renderTweets = (tweets) => {
     $(".new-tweet-post").append(createTweetElement(tweet));
   }
 };
+
+const toggleTweet = () => {
+  $("#new-tweet").toggle().hide().h;
+};
 // render and add the lastest tweets
 const addTweetsSubmission = (tweets) => {
   const tweet = Object.values(tweets).pop();
   $(".new-tweet-post").prepend(createTweetElement(tweet).hide().fadeIn(400));
 };
+
 // escaple function to prevent XSS
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+
 //create a new tweet element
 const createTweetElement = (tweet) => {
   let $tweet = $(`<article class="tweet-feed">
@@ -110,6 +117,7 @@ const charCounter = function () {
   }
   $("#counter").text(remainingLength);
 };
+
 //convert the unix seconds to normal time // This needs to refactor
 const convertTime = (pastTime) => {
   // 1575909015000
@@ -172,6 +180,7 @@ const convertTime = (pastTime) => {
 
   return getHumanTime(howLongAgo);
 };
+
 //validate text length if it's too long or too short
 const textValidation = (str) => {
   if (str.length > 140) {

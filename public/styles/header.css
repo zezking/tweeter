@@ -8,6 +8,7 @@
 
 .user-header {
   margin-top: 3em;
+  margin-bottom: -2em;
   height: 400px;
   width: 100%;
   display: flex;
