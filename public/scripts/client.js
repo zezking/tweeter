@@ -20,6 +20,8 @@ $(document).ready(function () {
   $("textarea").on("input", charCounter);
   $("#new-tweet-button").on("click", toggleTweet);
   $("#compose-tweet-button").on("click", toggleTweet);
+  $("#scroll-up").on("click", scrollUpAction);
+  $(window).scroll(scrollUpButton);
 
   //load dummy tweets
   loadTweets(renderTweets);

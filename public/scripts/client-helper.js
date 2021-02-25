@@ -66,9 +66,6 @@ const renderTweets = (tweets) => {
   }
 };
 
-const toggleTweet = () => {
-  $(".input").slideToggle();
-};
 // render and add the lastest tweets
 const addTweetsSubmission = (tweets) => {
   const tweet = Object.values(tweets).pop();
@@ -188,4 +185,20 @@ const textValidation = (str) => {
   } else if (str.length === 0) {
     return "notPresent";
   }
+};
+//togal the tweet section
+const toggleTweet = () => {
+  $(".input").slideToggle();
+};
+
+const scrollUpButton = () => {
+  if ($(this).scrollTop()) {
+    $("#scroll-up").fadeIn();
+  } else {
+    $("#scroll-up").fadeOut();
+  }
+};
+
+const scrollUpAction = () => {
+  $("html, body").animate({ scrollTop: 0 }, 300);
 };
