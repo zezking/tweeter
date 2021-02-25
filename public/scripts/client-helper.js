@@ -11,30 +11,19 @@ const submitTweet = (event, action) => {
   event.preventDefault();
   const textLength = $("textarea").val();
   if (textValidation(textLength) === "toolong") {
-    $.sweetModal({
-      title: "Content Too Long!",
-      message: "Would you shut up man...",
-      theme: $.sweetModal.THEME_DARK,
-      icon: $.sweetModal.ICON_WARNING,
-      buttons: {},
-    });
     return;
   }
   if (textValidation(textLength) === "notPresent") {
-    $.sweetModal({
-      title: "Content Too Short!",
-      message: "You need to speak more!",
-      theme: $.sweetModal.THEME_DARK,
-      icon: $.sweetModal.ICON_WARNING,
-      buttons: {},
-    });
     return;
   }
+
   $.ajax({
     url,
     method: "POST",
     data: $("form").serialize(),
   }).then((res) => action(res));
+
+  $("#tweet-text").val("");
 };
 //render all the tweets from the tweeter objects
 const renderTweets = (tweets) => {
