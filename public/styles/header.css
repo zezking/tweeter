@@ -30,7 +30,7 @@
 
 @media only screen and (min-width: 1025px) {
   .user-header {
-    width: 12em;
+    min-width: 12em;
     height: 12em;
     margin: 8em 0 2em auto;
     border-radius: 50%;
