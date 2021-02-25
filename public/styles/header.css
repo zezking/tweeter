@@ -10,11 +10,9 @@
   margin-top: 3em;
   margin-bottom: 1em;
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: hsl(223, 17%, 16%);
   background-color: #061030;
   background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
   color: #f5f5f5;
@@ -34,13 +32,13 @@
   .user-header {
     width: 12em;
     height: 12em;
-    margin: 8em 0 2em 2em;
+    margin: 8em 0 2em auto;
     border-radius: 50%;
   }
 
   .user-header img {
     margin-top: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     width: 200px;
   }
 }

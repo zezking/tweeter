@@ -35,6 +35,8 @@ label {
   margin-bottom: 1em;
   font-weight: 600;
 }
+main {
+}
 
 button {
   width: 4em;
@@ -90,4 +92,15 @@ textarea {
   margin: 0;
   padding-right: 24em;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1025px) {
+  main {
+    margin-top: 10em;
+    margin-left: auto;
+  }
+  .new-tweet h2 {
+    padding-right: 36em;
+    white-space: nowrap;
+  }
 }

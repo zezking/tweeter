@@ -68,58 +68,59 @@
         tweet</a
       >
     </nav>
-    <header class="user-header">
-      <div class="img-cropper">
+    <div class="main-content">
+      <header class="user-header">
         <img src="/images/profile.png" />
-      </div>
-      <br />
-      <div class="username">
-        <h2><span>Ada</span>Vampire</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <!-- User's new tweeter container-->
-    <main class="container">
-      <div class="warning-box"></div>
-      <section class="new-tweet">
-        <div class="subtitle">
-          <h2 id="compose-tweet-button">
-            <i class="fas fa-angle-right"></i>Compose Tweet
-          </h2>
+
+        <br />
+        <div class="username">
+          <h2><span>Ada</span>Vampire</h2>
         </div>
-        <form method="POST" action="/tweets">
-          <div class="input">
-            <div class="label">
-              <label for="tweet-text">What are you humming about?</label>
-            </div>
-
-            <textarea
-              placeholder="say something nice!"
-              name="text"
-              id="tweet-text"
-            ></textarea>
-
-            <div class="button-counter">
-              <button id="send-tweet">Tweet</button>
-              <output
-                name="counter"
-                class="counter"
-                for="tweet-text"
-                id="counter"
-                >140</output
-              >
-            </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <!-- User's new tweeter container-->
+      <main class="container">
+        <div class="warning-box"></div>
+        <section class="new-tweet">
+          <div class="subtitle">
+            <h2 id="compose-tweet-button">
+              <i class="fas fa-angle-right"></i>Compose Tweet
+            </h2>
           </div>
-        </form>
-      </section>
+          <form method="POST" action="/tweets">
+            <div class="input">
+              <div class="label">
+                <label for="tweet-text">What are you humming about?</label>
+              </div>
 
-      <!-- New Tweet Start-->
-      <section class="new-tweet-feed">
-        <h2>
-          <i class="fas fa-angle-right"></i>See what's up with your friends
-        </h2>
-        <div class="new-tweet-post"></div>
-      </section>
-    </main>
+              <textarea
+                placeholder="say something nice!"
+                name="text"
+                id="tweet-text"
+              ></textarea>
+
+              <div class="button-counter">
+                <button id="send-tweet">Tweet</button>
+                <output
+                  name="counter"
+                  class="counter"
+                  for="tweet-text"
+                  id="counter"
+                  >140</output
+                >
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <!-- New Tweet Start-->
+        <section class="new-tweet-feed">
+          <h2>
+            <i class="fas fa-angle-right"></i>See what's up with your friends
+          </h2>
+          <div class="new-tweet-post"></div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
