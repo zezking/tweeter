@@ -8,14 +8,15 @@
 
 .user-header {
   margin-top: 3em;
-  margin-bottom: -2em;
-  height: 400px;
+  margin-bottom: 1em;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: hsl(223, 17%, 16%);
-  background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+  background-color: #061030;
+  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
   color: #f5f5f5;
 }
 
@@ -27,4 +28,19 @@
 .username h2 {
   margin-top: -0.5em;
   font-weight: 300;
+}
+
+@media only screen and (min-width: 1025px) {
+  .user-header {
+    width: 12em;
+    height: 12em;
+    margin: 8em 0 2em 2em;
+    border-radius: 50%;
+  }
+
+  .user-header img {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    width: 200px;
+  }
 }
