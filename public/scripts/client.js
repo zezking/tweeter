@@ -18,6 +18,7 @@ $(document).ready(function () {
 
   //character counter
   $("textarea").on("input", charCounter);
+  $("#send-Tweet").on("hover", buttonAnimation());
 
   //load dummy tweets
   loadTweets(renderTweets);

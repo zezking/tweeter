@@ -48,8 +48,15 @@ const addTweetsSubmission = (tweets) => {
   const tweet = Object.values(tweets).pop();
   $(".new-tweet-post").prepend(createTweetElement(tweet).hide().fadeIn(400));
 };
+// escaple function to prevent XSS
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 //create a new tweet element
 const createTweetElement = (tweet) => {
+  const harmfulmsg = "<script>$('body').empty()</script>";
   let $tweet = $(`<article class="tweet-feed">
   <header>
     <div class="user-profile-name">
@@ -58,7 +65,7 @@ const createTweetElement = (tweet) => {
     </div>
     <a class="user-ID">${tweet.user.handle}</a>
   </header>
-  <p>${tweet.content.text}</p>
+  <p>${escape(tweet.content.text)}</p>
   <footer>
     <time>${convertTime(tweet["created_at"])}</time>
     <div class="save-retweet-like">
@@ -84,10 +91,11 @@ const charCounter = function () {
 };
 //convert the unix seconds to normal time // This needs to refactor
 const convertTime = (pastTime) => {
-  const datetime = new Date(0);
+  // 1575909015000
+  const datetime = new Date(pastTime);
+  const humanDateFormat = datetime.toLocaleString();
 
-  datetime.setUTCSeconds(pastTime);
-  return datetime;
+  return humanDateFormat;
 };
 //validate text length if it's too long or too short
 const textValidation = (str) => {
@@ -96,4 +104,8 @@ const textValidation = (str) => {
   } else if (str.length === 0) {
     return "notPresent";
   }
+};
+
+const buttonAnimation = () => {
+  $("#send-Tweet").css("background-color:black");
 };

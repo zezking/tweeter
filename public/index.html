@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-feed.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/warning.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -75,6 +76,13 @@
     <!-- Page-specific (main) content here -->
     <!-- User's new tweeter container-->
     <main class="container">
+      <div class="warning-box">
+        <h2 id="warning">
+          <i class="fas fa-exclamation-triangle"></i>
+
+          Please Enter a shorter Text<i class="fas fa-exclamation-triangle"></i>
+        </h2>
+      </div>
       <section class="new-tweet">
         <div class="subtitle">
           <h2><i class="fas fa-angle-right"></i>Compose Tweet</h2>

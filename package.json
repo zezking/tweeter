@@ -15,7 +15,8 @@
     "chance": "^1.0.2",
     "express": "^4.13.4",
     "jquery-confirm": "^3.3.4",
-    "md5": "^2.1.0"
+    "md5": "^2.1.0",
+    "moment": "^2.29.1"
   },
   "devDependencies": {
     "nodemon": "^1.9.2"

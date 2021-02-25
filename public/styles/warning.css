@@ -1,0 +1,9 @@
+.fa-exclamation-triangle {
+  color: #ff3333;
+  margin-left: 0.4em;
+  border: #ff3333 1px;
+}
+
+.warning-box {
+  border: 1px #ff3333;
+}
