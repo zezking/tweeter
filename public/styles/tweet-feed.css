@@ -43,7 +43,7 @@
 }
 .tweet-feed p {
   margin: 0 0 0.7em 2em;
-
+  overflow-wrap: anywhere;
   padding: 1em;
 }
 .tweet-feed time {
@@ -62,5 +62,12 @@
 @media only screen and (min-width: 1025px) {
   .new-tweet-feed h2 {
     padding-right: 2em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .tweet-feed {
+    max-width: 16em;
+    font-size: 1.4em;
   }
 }

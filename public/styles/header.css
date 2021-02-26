@@ -48,4 +48,10 @@
     background-color: hsl(223, 17%, 16%);
     background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
   }
+  .user-header img {
+    width: 13em;
+  }
+  .user-header h2 {
+    font-size: 1.4em;
+  }
 }

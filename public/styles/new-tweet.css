@@ -104,3 +104,34 @@ textarea {
     white-space: nowrap;
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .input {
+    max-width: 16em;
+    font-size: 1.4em;
+  }
+  .new-tweet h2 {
+    display: inline;
+    border: #ffc068 solid 1px;
+    padding: 0.6em;
+    border-radius: 15px;
+  }
+  .fa-angle-right {
+    display: none;
+  }
+  .subtitle {
+    display: flex;
+    justify-content: center;
+  }
+
+  label {
+    font-size: 0.6em;
+  }
+
+  button {
+    font-size: 80%;
+  }
+  .counter {
+    font-size: 0.8em;
+  }
+}
