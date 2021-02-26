@@ -13,7 +13,7 @@ npm install
 npm run local
 ```
 
-visit in Browser
+visit the following URL
 
 ```
 localhost:8080/
