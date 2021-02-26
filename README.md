@@ -21,13 +21,13 @@ localhost:8080/
 
 ## Screenshots and Features
 
-Desktop
-
-![Desktop](./screenshots/desktop.png)
-
 iPad
 
 ![iPad](./screenshots/ipad.png)
+
+Desktop
+
+![Desktop](./screenshots/desktop.png)
 
 New Tweet Generation
 
