@@ -40,8 +40,11 @@ New Tweet Generation
 Warning
 
 - Over Character Limits
+
   ![Too Long](./screenshots/warningContentTooLong.gif)
+
 - No Text
+
   ![No Content](./screenshots/warningNoContent.gif)
 
 Toggle Action
@@ -51,6 +54,7 @@ Toggle Action
 Scroll Up Action Mobile
 
 ![Scroll Up Action](./screenshots/scrollupMobile.gif)
+
 Scroll Up Action
 
 ![Scroll Up Action](./screenshots/scrollupAction.gif)
