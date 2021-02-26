@@ -26,10 +26,11 @@ $(document).ready(function () {
   $("#scroll-up").on("click", scrollUpAction);
   //when scroll down the scrollup button will disappear
   $(window).scroll(scrollUpButton);
-  //scroll up to fade out the "see what your friends are doing h2"
+  //scroll up to fade out the "see what your friends are doing h2" in mobile
   if ($(window).width() < 701) {
     $(window).scroll(feedSubtitleHide);
   }
+  //scroll up to fade out the main title Tweeter in mobile
   if ($(window).width() < 701) {
     $(window).scroll(mainTitleHide);
   }
