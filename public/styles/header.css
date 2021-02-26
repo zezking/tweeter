@@ -7,14 +7,14 @@
 }
 
 .user-header {
-  margin-top: 3em;
+  margin-top: 2em;
   margin-bottom: 1em;
   height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #061030;
-  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+  background-color: #07080a;
+  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
   color: #f5f5f5;
 }
 
