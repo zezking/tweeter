@@ -59,6 +59,10 @@ button {
 .fa-angle-right {
   margin-right: 0.5em;
 }
+.fa-angle-down {
+  display: none;
+  margin-right: 0.5em;
+}
 .label,
 textarea {
   margin-bottom: 0.8em;
@@ -123,6 +127,9 @@ textarea {
   .fa-angle-right {
     display: none;
   }
+  .fa-angle-down {
+    display: inline-block;
+  }
 
   label {
     font-size: 0.6em;
@@ -135,9 +142,9 @@ textarea {
     font-size: 0.8em;
   }
   .new-tweet-post {
-    margin-top: 4em;
+    margin-top: 10em;
   }
   form {
-    margin-bottom: 5em;
+    margin-bottom: 1em;
   }
 }

@@ -200,9 +200,15 @@ const scrollUpButton = () => {
 };
 const feedSubtitleHide = () => {
   if ($(this).scrollTop()) {
-    $(".new-tweet-feed-subtitle").fadeOut();
+    $(".new-tweet-feed-subtitle")
+      .css("visibility", "hidden")
+      .hide()
+      .fadeOut(600);
   } else {
-    $(".new-tweet-feed-subtitle").fadeIn();
+    $(".new-tweet-feed-subtitle")
+      .css("visibility", "visible")
+      .hide()
+      .fadeIn(600);
   }
 };
 //the scroll up animation
