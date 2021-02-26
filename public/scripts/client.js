@@ -22,6 +22,7 @@ $(document).ready(function () {
   $("#compose-tweet-button").on("click", toggleTweet);
   $("#scroll-up").on("click", scrollUpAction);
   $(window).scroll(scrollUpButton);
+  $(window).scroll(feedSubtitleHide);
 
   //load dummy tweets
   loadTweets(renderTweets);

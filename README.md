@@ -21,6 +21,10 @@ localhost:8080/
 
 ## Screenshots and Features
 
+mobile
+
+![iPad](./screenshots/mobile.png)
+
 iPad
 
 ![iPad](./screenshots/ipad.png)

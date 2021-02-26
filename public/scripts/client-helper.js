@@ -190,7 +190,7 @@ const textValidation = (str) => {
 const toggleTweet = () => {
   $(".input").slideToggle();
 };
-
+//make sure the button gone when scroll up
 const scrollUpButton = () => {
   if ($(this).scrollTop()) {
     $("#scroll-up").fadeIn();
@@ -198,7 +198,14 @@ const scrollUpButton = () => {
     $("#scroll-up").fadeOut();
   }
 };
-
+const feedSubtitleHide = () => {
+  if ($(this).scrollTop()) {
+    $(".new-tweet-feed-subtitle").fadeOut();
+  } else {
+    $(".new-tweet-feed-subtitle").fadeIn();
+  }
+};
+//the scroll up animation
 const scrollUpAction = () => {
   $("html, body").animate({ scrollTop: 0 }, 300);
 };
