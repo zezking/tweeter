@@ -70,4 +70,21 @@
     max-width: 16em;
     font-size: 1.4em;
   }
+  .new-tweet-feed-subtitle {
+    display: flex;
+    justify-content: center;
+  }
+  .username {
+    display: block;
+    font-size: 0.8em;
+  }
+  .user-ID {
+    display: block;
+    font-size: 0.8em;
+  }
+
+  .tweet-feed p {
+    margin: 0;
+    font-size: 0.8em;
+  }
 }

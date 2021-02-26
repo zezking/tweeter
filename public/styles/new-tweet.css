@@ -112,16 +112,16 @@ textarea {
   }
   .new-tweet h2 {
     display: inline;
-    border: #ffc068 solid 1px;
+    background-color: #ffc068;
     padding: 0.6em;
     border-radius: 15px;
-  }
-  .fa-angle-right {
-    display: none;
   }
   .subtitle {
     display: flex;
     justify-content: center;
+  }
+  .fa-angle-right {
+    display: none;
   }
 
   label {
