@@ -38,7 +38,6 @@ New Tweet Generation
 ![New Tweet Generation](./screenshots/newTweet.png)
 
 Warning
-
 ![Too Long](./screenshots/warningContentTooLong.gif)
 ![No Content](./screenshots/warningNoContent.gif)
 

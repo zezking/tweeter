@@ -18,10 +18,15 @@ $(document).ready(function () {
 
   //character counter
   $("textarea").on("input", charCounter);
+  //toggle tweet box textarea
   $("#new-tweet-button").on("click", toggleTweet);
+  //make compose tweet text a toggle button to toggle tweet textarea
   $("#compose-tweet-button").on("click", toggleTweet);
+  //click to scroll up to the top of the page
   $("#scroll-up").on("click", scrollUpAction);
+  //when scroll down the scrollup button will disappear
   $(window).scroll(scrollUpButton);
+  //scroll up to fade out the "see what your friends are doing h2"
   if ($(window).width() < 701) {
     $(window).scroll(feedSubtitleHide);
   }
