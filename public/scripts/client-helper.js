@@ -54,8 +54,10 @@ const submitTweet = (event, action) => {
     method: "POST",
     data: $("form").serialize(),
   }).then((res) => action(res));
-
+  //empty textarea after submit
   $("#tweet-text").val("");
+  //reset counter after submit
+  $("#counter").text("140");
 };
 
 //render all the tweets from the tweeter objects
@@ -172,7 +174,7 @@ const convertTime = (pastTime) => {
       units = "seconds";
     }
 
-    return humanTime + " " + units;
+    return `${humanTime} ${units} ago`;
   };
 
   return getHumanTime(howLongAgo);
