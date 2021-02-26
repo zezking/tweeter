@@ -58,7 +58,9 @@
 .user-ID {
   font-size: 0.9em;
 }
-
+.save-retweet-like {
+  opacity: 0;
+}
 @media only screen and (min-width: 1025px) {
   .new-tweet-feed h2 {
     padding-right: 2em;

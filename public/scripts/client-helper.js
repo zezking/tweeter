@@ -198,6 +198,7 @@ const scrollUpButton = () => {
     $("#scroll-up").fadeOut();
   }
 };
+//make the mobile h2 fadeout when user scrolling down
 const feedSubtitleHide = () => {
   if ($(this).scrollTop()) {
     $(".new-tweet-feed-subtitle")
@@ -211,6 +212,8 @@ const feedSubtitleHide = () => {
       .fadeIn(600);
   }
 };
+
+const hideSocialIcon = () => {};
 //the scroll up animation
 const scrollUpAction = () => {
   $("html, body").animate({ scrollTop: 0 }, 300);
