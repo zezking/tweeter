@@ -203,15 +203,17 @@ const scrollUpButton = () => {
 //make the mobile h2 fadeout when user scrolling down
 const feedSubtitleHide = () => {
   if ($(this).scrollTop()) {
-    $(".new-tweet-feed-subtitle")
-      .css("visibility", "hidden")
-      .hide()
-      .fadeOut(600);
+    $(".new-tweet-feed-subtitle").fadeOut();
   } else {
-    $(".new-tweet-feed-subtitle")
-      .css("visibility", "visible")
-      .hide()
-      .fadeIn(600);
+    $(".new-tweet-feed-subtitle").fadeIn();
+  }
+};
+//hide main title in mobile when scroll up
+const mainTitleHide = () => {
+  if ($(this).scrollTop()) {
+    $(".logo").fadeOut();
+  } else {
+    $(".logo").fadeIn();
   }
 };
 

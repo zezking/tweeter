@@ -30,6 +30,9 @@ $(document).ready(function () {
   if ($(window).width() < 701) {
     $(window).scroll(feedSubtitleHide);
   }
+  if ($(window).width() < 701) {
+    $(window).scroll(mainTitleHide);
+  }
 
   //load dummy tweets
   loadTweets(renderTweets);
