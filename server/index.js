@@ -2,7 +2,7 @@
 
 // Basic express setup:
 
-const PORT = 5050;
+const PORT = 7070;
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();

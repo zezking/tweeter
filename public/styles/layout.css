@@ -21,20 +21,21 @@ button:focus {
   outline: none;
 }
 h2 {
+  color: #171717;
   font-size: 0.8em;
 }
 
 body {
-  color: #f4f1ec;
-  background-color: #222630;
-  background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+
+  background-color: #FFFFFF;
+  
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
 }
 
 .container {
-  background-color: hsl(223, 17%, 16%);
-  background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+  background-color: #FFFFFF;
+
   display: flex;
   flex-direction: column;
   align-items: center;

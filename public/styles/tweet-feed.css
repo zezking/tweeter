@@ -8,15 +8,15 @@
   margin: 1em 1em 2em 1em;
   padding: 1.5em;
   border-radius: 1em;
-  -webkit-box-shadow: 10px 9px 36px 0px rgb(0 0 0);
-  -moz-box-shadow: 10px 9px 36px 0px rgba(0, 0, 0, 1);
-  box-shadow: 10px 9px 36px 0px rgb(0 0 0);
+  -webkit-box-shadow: 10px 10px 23px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 23px -11px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 23px -11px rgba(0,0,0,0.75);
   transition: box-shadow 200ms;
 }
 .tweet-feed:hover {
-  -webkit-box-shadow: 10px 10px 19px 11px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 10px 10px 19px 11px rgba(0, 0, 0, 1);
-  box-shadow: 10px 10px 19px 11px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.75);
 }
 .tweet-feed header {
   font-size: 0.9em;

@@ -9,13 +9,53 @@
 }
 
 #warning-too-short {
-  background-color: hsl(0, 0%, 10%);
+  position: fixed;
+ color: #171717;
   padding: 0.5em;
   border-radius: 1.5em;
+  font-size: 0.7em;
+  top: 24em;
+  right: 7em;
 }
 
-#warning-too-long {
-  background-color: hsl(0, 0%, 10%);
+#warning-too-long { 
+  position: fixed;
+  color: #171717;
   padding: 0.5em;
   border-radius: 1.5em;
+  font-size: 0.7em;
+  top: 25em;
+  right: 7em;
+  
 }
+
+@media only screen and (min-width: 1025px) {
+  #warning-too-short {
+    font-size: 0.7em;
+    top: 187px;
+    right: 646px;
+
+  }
+  
+  #warning-too-long { 
+    font-size: 0.7em;
+    top: 187px;
+    right: 646px;
+
+  }
+  
+}
+@media only screen and (max-width: 700px) {
+  #warning-too-short {
+    font-size: 0.7em;
+    top: 44em;
+    right: 2em;
+  }
+  #warning-too-long { 
+    font-size: 0.7em;
+    top: 44em;
+    right: 2em;
+  }
+  
+}
+
