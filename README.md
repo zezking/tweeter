@@ -35,7 +35,7 @@ Desktop
 
 New Tweet Generation
 
-![New Tweet Generation](./screenshots/newTweet.png)
+![New Tweet Generation](./screenshots/newTweet.gif)
 
 Warning
 
